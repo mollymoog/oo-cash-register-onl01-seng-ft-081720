@@ -7,11 +7,13 @@ class CashRegister
     @total = 0 
     @discount = discount
     @price
+    @quantity
     @items = []
   end
   
   def add_item (title, price, quantity = 1)
     @price = price
+    @quantity = quantity
     @total += (quantity * price)
     while quantity > 0 do
       @items << title
